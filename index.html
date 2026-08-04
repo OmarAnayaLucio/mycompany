@@ -493,7 +493,7 @@
             font-family: var(--font-mono);
             font-size: 10.5px;
             letter-spacing: .06em;
-            color: var(--grey-mid);
+            color: rgba(255, 255, 255, .8);
             text-transform: uppercase;
             margin-top: 6px;
             display: block;
@@ -548,6 +548,47 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 64px 24px;
+        }
+
+        /* ===== SECCIONES CON FONDO OSCURO — TEXTO CLARO ===== */
+        .shelf-soft .section-head h2,
+        .shelf-strong .section-head h2 {
+            color: #fff;
+        }
+        .shelf-soft .section-head p,
+        .shelf-strong .section-head p {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .shelf-soft .tl-list,
+        .shelf-strong .tl-list {
+            color: rgba(255, 255, 255, .85);
+        }
+        .shelf-soft .tl-role,
+        .shelf-strong .tl-role {
+            color: #fff;
+        }
+        .shelf-soft .tl-org,
+        .shelf-strong .tl-org {
+            color: rgba(255, 255, 255, .6);
+        }
+        .shelf-soft .tl-list b,
+        .shelf-strong .tl-list b {
+            color: #fff;
+        }
+
+        .shelf-strong .skill-group-title {
+            color: rgba(255, 255, 255, .7);
+        }
+        .shelf-strong .tag {
+            color: rgba(255, 255, 255, .8);
+            border-color: rgba(255, 255, 255, .2);
+        }
+        .shelf-strong .edu-item span {
+            color: rgba(255, 255, 255, .7);
+        }
+        .shelf-strong .edu-item h5 {
+            color: #fff;
         }
 
         /* ===== SERVICIOS ===== */
@@ -828,11 +869,11 @@
             font-weight: 600;
             font-size: clamp(24px, 3.2vw, 34px);
             margin: 0 0 14px;
-            color: var(--grey-light);
+            color: #fff;
         }
         .cta-panel p {
             font-size: 14.5px;
-            color: var(--grey-mid);
+            color: rgba(255, 255, 255, .8);
             max-width: 520px;
             margin: 0 auto 30px;
             line-height: 1.7;
@@ -851,7 +892,7 @@
             flex-wrap: wrap;
             font-family: var(--font-mono);
             font-size: 12px;
-            color: var(--grey-mid);
+            color: rgba(255, 255, 255, .7);
         }
         .contact-row a {
             text-decoration: none;
@@ -859,6 +900,7 @@
             align-items: center;
             gap: 7px;
             transition: color .2s;
+            color: inherit;
         }
         .contact-row a:hover {
             color: var(--cyan);
@@ -1045,7 +1087,7 @@
 
         <section id="trayectoria" class="shelf-soft">
             <div class="section-head">
-                <h2>Trayectoria</h2>
+                <h2>Trayectoria y logros</h2>
                 <p>11+ años de resultados medibles</p>
             </div>
             <div class="wrap" style="padding-top:0; max-width:820px;">
@@ -1107,7 +1149,7 @@
             companyName: "XRocket AI",
             founderName: "J. Omar Anaya Lucio",
             role: "Data Scientist · Project Manager · Director",
-            photoUrl: "https://omaranayalucio.github.io/mycompany/mifoto4.png",
+            photoUrl: "https://omaranayalucio.github.io/mycompany/mifoto.png",
             whatsappNumber: "525669414664",
             whatsappMessage: "Hola Omar, vi tu página de XRocket AI y me interesa platicar sobre un proyecto de datos.",
             email: "omar.anayalucio@gmail.com",
@@ -1175,41 +1217,24 @@
                 <p>${p.d}</p>
               </div>`).join('');
 
-        /* ---------------- Trayectoria ---------------- */
+        /* ---------------- Trayectoria y logros ---------------- */
         const TIMELINE = [{
             year: "2024 — 2025",
             role: "Team Leader | Senior Data Analyst",
             org: "GNP · Grupo Nacional Provincial",
             bullets: [
-                "Lideré un equipo de analistas evaluando <b>satisfacción de clientes</b> en todas las líneas de la aseguradora (hogar, médico, vida, mascotas).",
-                "Encabecé un proyecto de IA para análisis de sentimiento que <b>redujo el tiempo de análisis en 66%</b> y multiplicó por 4 la muestra analizada.",
-                "Diseñé dashboards ejecutivos (Looker Studio / Power BI) sobre BigQuery, optimizando SQL para <b>reducir 89% el tiempo de consulta</b> sobre 2M+ registros diarios, eliminando 3 días de retraso en reportes."
+                "Implementé sistemas de IA para análisis de sentimiento que <b>redujeron el tiempo de análisis en 66%</b> y multiplicaron por 4 la muestra analizada.",
+                "Optimicé consultas SQL en BigQuery para dashboards ejecutivos, <b>reduciendo 89% el tiempo de consulta</b> sobre 2M+ registros diarios."
             ]
         }, {
-            year: "2021 — 2023",
-            role: "Team Leader | Top Customer Service & Retention (ARG)",
+            year: "2012 — 2023",
+            role: "Liderazgo de equipos & optimización de procesos",
             org: "American Express",
             bullets: [
-                "Lideré un equipo de servicio al cliente, superando objetivos de negocio en ~2% mes a mes; reconocimiento <b>Top Team Leader Score</b>.",
-                "Desarrollé un dashboard de <b>insights de churn</b> que redujo el tiempo de análisis diario en 2 días.",
-                "Identifiqué, vía análisis ad-hoc, la correlación entre satisfacción, tarifas e inflación — clave para las estrategias de retención anual."
-            ]
-        }, {
-            year: "2018 — 2021",
-            role: "Team Leader | Fraud Prevention MEX, ARG, SPA & Caribe",
-            org: "American Express",
-            bullets: [
-                "Lideré un equipo de especialistas en prevención de fraude, superando el objetivo de CSAT en +2%.",
-                "Desarrollé un dashboard de <b>sentimiento de clientes y reclamos</b> que redujo el tiempo de análisis diario en 2 días."
-            ]
-        }, {
-            year: "2012 — 2018",
-            role: "Specialist & Coach | Fraud Prevention MEX, ARG, SPA",
-            org: "American Express",
-            bullets: [
-                "Detecté una vulnerabilidad en el bloqueo de tarjetas y lideré el cambio que <b>mejoró la precisión en ~90%</b> para escenarios específicos de fraude.",
-                "Participé en la implementación de un back center desde cero hasta operación en Guadalajara, Jalisco.",
-                "Aseguré la continuidad del servicio durante el sismo de 2017 en México, en plena capacitación de equipo."
+                "Lideré equipos grandes en servicio al cliente y prevención de fraude, excediendo objetivos de CSAT y eficiencia en múltiples regiones (MEX, ARG, SPA, Caribe).",
+                "Desarrollé dashboards de <b>insights de churn y sentimiento</b> que redujeron el tiempo de análisis diario en 2 días.",
+                "Implementé un <b>proyecto de call center desde cero</b> hasta operación en Guadalajara, Jalisco, asegurando la continuidad del servicio durante el sismo de 2017.",
+                "Detecté y corregí una vulnerabilidad en el bloqueo de tarjetas, <b>mejorando la precisión en ~90%</b> para escenarios de fraude."
             ]
         }];
         document.getElementById('timeline').innerHTML = TIMELINE.map(t => `
